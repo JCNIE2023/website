@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+     html {  background-image: url(green.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     }
+   
+
+h1 {
+    text-align: center;
+    color: #19ff00;
+    margin-bottom: 43px;
+    font-size: 5em;
+}
+
+form {
+    background-color: #47f1254d;
+    border-radius: 84px;
+    box-shadow: 25 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 72px;
+    max-width: 382px;
+    margin: 37px auto;
+    transition: transform 0.1s;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 94%;
+    padding: 18px;
+    margin-bottom: 2px;
+    border: 3px solid #ddd;
+    border-radius: 21px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: seagreen;
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+  outline: none;
+}
+
+button {
+    background-color: #060606f0;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 109px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 106%;
+}
+
+button:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+        
+    </style>
+</head>
+<body>
+
+ 
+        <script
+          type="text/javascript"
+          src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"
+        ></script>
+      </head>
+      <body>
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required /><br /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" required></textarea><br /><br />
+          <button type="submit">Send Message</button>
+        </form>
+        <script src="app.js"></script>
+   
+</body>
+</html>
