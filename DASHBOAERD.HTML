@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src = "app.js"></script>
+    <style>
+      body {
+        background-color: #50b89f;
+      }
+      .hero {
+        background-image: url("your-hero-image.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .card {
+        border: none;
+        border-radius: 10px;
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+      footer {
+        background-color: #f8f9fa;
+      }
+      .buy-button {
+        transition: background-color 0.3s ease;
+      }
+      .buy-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero text-center">
+      <h1>E-commerce Dashboard</h1>
+      <p class="lead">Explore Our Amazing Products</p>
+    </header>
+
+    
+
+     <div class="container my-5">
+     <div class="row">
+     <div class="col-md-4">
+     <div class="card mb-4">
+     <div class="card-body">
+              <h5 class="card-title">Laptop</h5>
+              <img src="laptop.png" alt="Laptop" />
+              <p class="card-text">
+                High-performance laptop for all your needs.
+              </p>
+              <p>PRICE: 1500$</p>
+              <p>STOCK: 5</p>
+              <button
+                class="btn btn-primary buy-button"
+                onclick="buyProduct('Laptop')"
+              >
+                Buy Now!
+         </button>
+     </div>
+     </div>
+     </div>
+     <div class="col-md-4">
+     <div class="card mb-4">
+     <div class="card-body">
+     <h5 class="card-title">Headphones</h5>
+              <img src="headphones.png" alt="Headphones" />
+              <p class="card-text">Experience sound like never before.</p>
+              <p>PRICE: 100$</p>
+              <p>STOCK: 10</p>
+              <button
+                class="btn btn-primary buy-button"
+                onclick="buyProduct('Headphones')"
+              >
+                Buy Now!
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+     <div class="card mb-4">
+      <div class="card-body">
+              <h5 class="card-title">Keyboard</h5>
+              <img src="keyboard.png" alt="Keyboard" />
+              <p class="card-text">
+                Ergonomic keyboard for comfortable typing.
+              </p>
+              <p>PRICE: 50$</p>
+              <p>STOCK:20</p>
+              <button
+                class="btn btn-primary buy-button"
+                onclick="buyProduct('Keyboard')"
+              >  Buy Now!
+   </button>
+      </div>
+    </div>
+
+</div>
+
+<div class="col-md-4">
+    <div class="card mb-4">
+     <div class="card-body">
+             <h5 class="card-title">Computer Table </h5>
+             <img src="table.png" alt="table" />
+             <p class="card-text">
+ Emeral green table            </p>
+             <p>PRICE: 590$</p>
+             <p>STOCK:20</p>
+             <button
+               class="btn btn-primary buy-button"
+               onclick="buyProduct('Computer Table ')"
+             >  Buy Now!
+  </button>
+     </div>
+   </div>
+</div>
+    </div>
+    
+
+    <footer class="text-center py-">
+      <p>&copy; 2024 JC NIEL KING S. PEJE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function buyProduct(productName) {
+          alert(`You have selected to buy: ${productName}`);
+        }
+      </script>
+  </body>
+</html>
