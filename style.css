@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-    margin-bottom: 20px; 
+    margin-bottom: 2%; 
     color: #155724;
     
 }
@@ -80,3 +80,4 @@ element.style {
     height: auto;
     border-radius: 33%;
 }
+ 
