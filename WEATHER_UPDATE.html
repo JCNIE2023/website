@@ -1,177 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
-    <title>Weather Update - Iligan City</title>
+    <title>Weather Update</title>
+
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: hsl(208, 78%, 79%);
-        color: #232323;
-        text-align: center;
-        font-size: 1.5em;
-        padding:80px;
-      }
-      #weather {
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #ffffff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(175, 173, 173, 0.1);
-        display: inline-block;
-        border-style: solid;
-        font-size: 1em;
-        border-radius: 20%;
-      }
-p{
-    font-size: 1em;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #19ff00;
+            background-image: url(green.jpg);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #19ff00;
+            font-family: cursive;
+        }
+
+        #weather {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #095700;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            border-style: solid;
+            font-size: 1em;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        #search-container {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #19ff00;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #19ff00;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #19ff00;
+        }
+
+        footer {
+    margin-top: 300px;
+    padding: 5px;
+    background-color: #095700;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    font-family: cursive;
 }
-      footer{ 
-      padding: 10px;
-      padding-left: 10px;
- 
-     
-    display: center;
-    border-style: inset;
-    border-radius: 20%;
-    border-color: black;
-      }
-     
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 0px solid #ddd;
+        }
+
+        th {
+            background-color: #095700;
+    font-family: arial;
+}
     </style>
+</head>
+<body>
 
+    <h1>Weather Update</h1>
 
-
-   
-  <body>
-    <h1>Weather Update - Iligan City</h1>
-
-    <div id="weather">
-      <p>Loading weather data...</p>
+    <!-- Search Bar -->
+    <div id="search-container">
+        <input type="text" id="city-name" placeholder="Enter city name..." />
+        <button onclick="getWeather()">Search</button>
     </div>
 
-<div id ="update">
-    <H1>Weather Information:</H1>
-    <p>The average temperature in Iligan in August for a typical day ranges from a high of 81°F (27°C) to a low of 72°F
-        (22°C). Some would describe it as pleasantly warm with a gentle breeze.
+    <!-- Weather Display -->
+    <div id="weather">
+        <p>Enter a city to get the weather information.</p>
+    </div>
 
-        For comparison, the hottest month in Iligan, April, has days with highs of 87°F (30°C) and lows of 74°F (23°C).
-        The coldest month, February has days with highs of 82°F (28°C) and lows of 71°F (21°C). This graph shows how an
-        average day looks like in Iligan in Agust based on historical data.</p>
-<br>
-    <h1>Humidity</h1> 
-    </lord-icon>
-    <li>Humidity: 90% </li>
-    <li>Wind: 8 km/h WeatherWednesday 2:00 PMRain</li>
-    <br>
-    <table>
-        <thead>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>MONDAY</th>
-            
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>TUESDAY</th>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>WENDSDAY</th>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>THURSDAY</th>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>FRIDAY</th>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>SATURDAY</th>
-            <th><lord-icon
-                    src="https://cdn.lordicon.com/zawvkqfy.json"
-                    trigger="hover"
-                    stroke="bold"
-                    style="width:25px;height:20px">
-                </lord-icon>SUNDAY</th>
-            <tr>
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-
-                <td>Hourly Weather · 1 PM 90°. rain drop 49% · 2 PM 89°. rain drop 51% · 3 PM 88°. rain drop 56% · 4 PM
-                    86°. rain drop 27% · 5 PM 85°. rain drop 22% · 6 PM 83°.</td>
-            </tr>
-        </thead>
-    </table>
-<br>
-</div>
-
-
+    <!-- Weekly Forecast Table -->
+    <div id="weekly-forecast" style="display: none;">
+        <h2>7-Day Forecast</h2>
+        <table id="forecast-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Temperature</th>
+                    <th>Weather</th>
+                    <th>Humidity</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+ 
+    <footer>
+        &copy; 2024 - JC NIEL KING S. PEJE - All Rights Reserved
+    </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", async function () {
-        const apiKey = "cc68bd4d6b26495ba2d60337241208";
-        const cityName = "Iligan";
-        const apiEndpoint = https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName};
+        const apiKey = 'cc68bd4d6b26495ba2d60337241208';
+        const baseURL = 'https://api.weatherapi.com/v1/';
 
-        try {
-          const response = await fetch(apiEndpoint); // Wait for the fetch to complete
-          const weatherData = await response.json(); // Wait for the response to be parsed into JSON
-          console.log(weatherData);
+        async function getWeather() {
+            const cityName = document.getElementById('city-name').value.trim();
+            if (!cityName) {
+                alert('Please enter a city name');
+                return;
+            }
 
-          const weatherContainer = document.getElementById("weather");
-          const temperatureInCelsius = weatherData.current.temp_c;
-          const weatherDescription = weatherData.current.condition.text;
-          const humidityLevel = weatherData.current.humidity;
+            const weatherContainer = document.getElementById('weather');
+            const forecastTable = document.getElementById('forecast-table').getElementsByTagName('tbody')[0];
+            document.getElementById('weekly-forecast').style.display = 'none';  
+            try {
+            
+                const currentWeather = await fetch(`${baseURL}current.json?key=${apiKey}&q=${cityName}`).then(response => response.json());
+                const forecastData = await fetch(`${baseURL}forecast.json?key=${apiKey}&q=${cityName}&days=7`).then(response => response.json());
+ 
+                const temperatureInCelsius = currentWeather.current.temp_c;
+                const weatherDescription = currentWeather.current.condition.text;
+                const humidityLevel = currentWeather.current.humidity;
+                weatherContainer.innerHTML = `
+                    <h2>${cityName}</h2>
+                    <p><strong>Temperature:</strong> ${temperatureInCelsius}°C</p>
+                    <p><strong>Weather:</strong> ${weatherDescription}</p>
+                    <p><strong>Humidity:</strong> ${humidityLevel}%</p>
+                `;
+ 
+                const forecastDataList = forecastData.forecast.forecastday;
+                const forecastRows = forecastDataList.map((day, index) => {
+                    const date = new Date(day.date);
+                    const dayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date);
 
-          weatherContainer.innerHTML = `
-           <h2>${cityName}</h2>
-           <p><strong>Temperature:</strong> ${temperatureInCelsius}°C</p>
-           <p><strong>Weather:</strong> ${weatherDescription}</p>
-           <p><strong>Humidity:</strong> ${humidityLevel}%</p>
-       `;
-        } catch (error) {
-          const weatherContainer = document.getElementById("weather");
-          weatherContainer.innerHTML = <p>Unable to retrieve weather data: ${error.message}</p>;
+                    return `
+                        <tr>
+                            <td>${dayName}</td>
+                            <td>${day.day.avgtemp_c}°C</td>
+                            <td>${day.day.condition.text}</td>
+                            <td>${day.day.avghumidity}%</td>
+                        </tr>
+                    `;
+                }).join('');
+                forecastTable.innerHTML = forecastRows;
+
+                document.getElementById('weekly-forecast').style.display = 'block';  
+
+            } catch (error) {
+                weatherContainer.innerHTML = `<p>Unable to retrieve weather data for ${cityName}. Please try again later.</p>`;
+                document.getElementById('weekly-forecast').style.display = 'none';
+            }
         }
-      });
     </script>
-  </body>
-
-  <br>
-  <footer>JC NIEL KINGS. PEJE 08/14/2024 </footer>
-
-
+</body>
 </html>

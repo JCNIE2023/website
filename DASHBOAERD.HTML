@@ -8,13 +8,13 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <script src = "app.js"></script>
+    <script src="app.js"></script>
     <style>
       body {
         background-color: #50b89f;
       }
       .hero {
-        background-image: url("your-hero-image.jpg");
+        background-image: url("your-hero-image.jpg"); /* Ensure you set a valid image URL */
         background-size: cover;
         background-position: center;
         color: #fff;
@@ -29,6 +29,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 10px 10px 0 0;
+        object-fit: cover;
       }
       .card:hover {
         transform: scale(1.05);
@@ -37,6 +38,7 @@
       }
       footer {
         background-color: #f8f9fa;
+        padding: 20px 0;
       }
       .buy-button {
         transition: background-color 0.3s ease;
@@ -52,18 +54,14 @@
       <p class="lead">Explore Our Amazing Products</p>
     </header>
 
-    
-
-     <div class="container my-5">
-     <div class="row">
-     <div class="col-md-4">
-     <div class="card mb-4">
-     <div class="card-body">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
               <h5 class="card-title">Laptop</h5>
-              <img src="laptop.png" alt="Laptop" />
-              <p class="card-text">
-                High-performance laptop for all your needs.
-              </p>
+              <img src="laptop.png" alt="High-performance Laptop" />
+              <p class="card-text">High-performance laptop for all your needs.</p>
               <p>PRICE: 1500$</p>
               <p>STOCK: 5</p>
               <button
@@ -71,15 +69,15 @@
                 onclick="buyProduct('Laptop')"
               >
                 Buy Now!
-         </button>
-     </div>
-     </div>
-     </div>
-     <div class="col-md-4">
-     <div class="card mb-4">
-     <div class="card-body">
-     <h5 class="card-title">Headphones</h5>
-              <img src="headphones.png" alt="Headphones" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Headphones</h5>
+              <img src="headphones.png" alt="Noise Cancelling Headphones" />
               <p class="card-text">Experience sound like never before.</p>
               <p>PRICE: 100$</p>
               <p>STOCK: 10</p>
@@ -88,51 +86,48 @@
                 onclick="buyProduct('Headphones')"
               >
                 Buy Now!
-    </button>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-     <div class="card mb-4">
-      <div class="card-body">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
               <h5 class="card-title">Keyboard</h5>
-              <img src="keyboard.png" alt="Keyboard" />
-              <p class="card-text">
-                Ergonomic keyboard for comfortable typing.
-              </p>
+              <img src="keyboard.png" alt="Ergonomic Keyboard" />
+              <p class="card-text">Ergonomic keyboard for comfortable typing.</p>
               <p>PRICE: 50$</p>
-              <p>STOCK:20</p>
+              <p>STOCK: 20</p>
               <button
                 class="btn btn-primary buy-button"
                 onclick="buyProduct('Keyboard')"
-              >  Buy Now!
-   </button>
+              >
+                Buy Now!
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Computer Table</h5>
+              <img src="table.png" alt="Emerald Green Computer Table" />
+              <p class="card-text">Emerald green table</p>
+              <p>PRICE: 590$</p>
+              <p>STOCK: 20</p>
+              <button
+                class="btn btn-primary buy-button"
+                onclick="buyProduct('Computer Table')"
+              >
+                Buy Now!
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-</div>
-
-<div class="col-md-4">
-    <div class="card mb-4">
-     <div class="card-body">
-             <h5 class="card-title">Computer Table </h5>
-             <img src="table.png" alt="table" />
-             <p class="card-text">
- Emeral green table            </p>
-             <p>PRICE: 590$</p>
-             <p>STOCK:20</p>
-             <button
-               class="btn btn-primary buy-button"
-               onclick="buyProduct('Computer Table ')"
-             >  Buy Now!
-  </button>
-     </div>
-   </div>
-</div>
-    </div>
-    
-
-    <footer class="text-center py-">
+    <footer class="text-center py-3">
       <p>&copy; 2024 JC NIEL KING S. PEJE. All Rights Reserved.</p>
     </footer>
 
@@ -140,9 +135,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        function buyProduct(productName) {
-          alert(`You have selected to buy: ${productName}`);
-        }
-      </script>
+      function buyProduct(productName) {
+        alert(`You have selected to buy: ${productName}`);
+      }
+    </script>
   </body>
 </html>
