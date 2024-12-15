@@ -89,10 +89,25 @@
     height: 300px;
     padding: 7px;
         }
+      
+.picture-hover {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+ 
+.picture-hover:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+}
+
         
         .navbar-transparent .navbar-brand {
     color: #00d330;
     font-family: cursive;
+}
+p {
+    margin-top: 0;
+    margin-bottom: -3rem;
 }
 
     </style>
@@ -122,13 +137,14 @@
  
     <section id="about" class="py-5 text-center bg-transparent">
         <div class="container">
-          <div class="text-center">
-            <img src="picture.kim.jpg" class="rounded" alt="...">
-          </div>
-            <h2 class="display-4">Hello, I'm Jc Niel  </h2>
+            <div class="text-center">
+                <img src="picture.kim.jpg" class="rounded picture-hover" alt="...">
+            </div>
+            <h2 class="display-4">Hello, I'm Jc Niel</h2>
             <p class="lead">I am a passionate developer specializing in web design and development. Let's create something amazing!</p>
         </div>
     </section>
+    
  
    
     <section id="projects" class="py-5">
@@ -165,16 +181,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="scroar.png" class="card-img-top" alt="Project Image" />
+                        <div class="card-body">
+                            <h5 class="card-title">Movie API</h5>
+                            <p class="card-text">A project that allows users to search and view movie details from the  API. Great for movie enthusiasts and developers alike.</p>
+                            <a href="movie.html" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+ 
     <footer class="bg-transparent text-light text-center py-4">
         <p>&copy; 2024 - JC NIEL KING S. PEJE - All Rights Reserved</p>
     </footer>
 
-    <!-- Scripts -->
+ 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
