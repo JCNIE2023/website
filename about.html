@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio - JC NIEL ING S. PEJE</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            background-image: url('green.jpg'); /* Ensure this image is present in your project directory */
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .navbar {
+            margin-bottom: 30px;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x600'); /* Replace with your own image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scales the card to 105% when hovered */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover for depth */
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4%;
+    font-family: Arial, sans-serif;
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 5px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 4%;
+            font-family: Arial, sans-serif;
+        }
+
+        .social-icons a {
+            font-size: 2rem;
+            margin-right: 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        p {
+            margin-top: -25px;
+            margin-bottom: 3rem;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+        }
+
+        .form-control {
+            border-radius: 0.75rem;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25);
+        }
+
+        .input-field {
+            transition: all 0.3s ease;
+        }
+
+        .input-field:hover,
+        .input-field:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .btn-hover {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1rem;
+            font-weight: 100;
+        }
+
+        textarea {
+            font-family: 'Arial', sans-serif;
+            border-radius: 10px;
+        }
+        .btn-primary {
+    background-color: #155724;
+    border-color: #28a745;
+    padding: 6px 19px;
+    font-size: .9rem;
+    border-radius: 30px;
+    font-weight: 100;
+}
+        .section-title {
+            font-size: 2.5rem;
+            color: #fff;
+            font-family: cursive;
+            font-weight: 600;
+        }
+        .btn-success {
+    color: #fff;
+    background-color: #155724;
+    border-color: #28a745;
+}
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+
+    
+     
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="picture.kim.jpg" alt="Your Photo" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8">
+                    <p>Hello! I am JC NIEL KING S. PEJE, a second-year student at St. Peter College, currently pursuing a degree in Bachelor of Science in Information Technology. Alongside my studies, I am also a student assistant, where I assist with various academic and administrative tasks. While I may not have mastered coding yet, I am deeply passionate about learning and improving my skills.</p>
+                    <p>I am eager to become proficient in web development and aim to continuously challenge myself to grow and develop the skills necessary to be the best in this field. I believe that with determination and hard work, I can achieve my goals and contribute meaningfully to the world of technology. In my free time, I enjoy exploring new technologies, improving my coding skills, and participating in projects that push me to expand my knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="portfolio" class="bg-transparent py-5">
+        <div class="container">
+            <h2 class="section-title">ACADEMIC BACKGROUND</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="st.peterlogo.png" class="card-img-top" alt="College Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">COLLEGE</h5>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="icnhslogo.png" class="card-img-top" alt="Senior High Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">SENIOR HIGH</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="iccs.png" class="card-img-top" alt="Elementary Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">ELEMENTARY</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-5 bg-transparent">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Connect with Me!</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control input-field" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control input-field" id="email" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control input-field" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-hover">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JC NIEL ING S. PEJE | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/boo
